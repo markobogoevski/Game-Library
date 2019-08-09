@@ -1,1 +1,68 @@
-<p>games works!</p>
+
+    <div class="jumbotron container-fluid card bg-dark text-light m-5">
+        <div class="card-header bg-dark text-light">
+            <h1>{{pageTitle}}</h1>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">Filter by:</div>
+                <div class="col-md-4">
+                    <input type='text' [(ngModel)]="listFilter"/>
+                </div>
+                <div class="col-md-2 float-right">Sort by:</div>
+                <div class="col-md-4 float-left">
+                        <select>
+                            <option>Something</option>
+                            <option>Something</option>
+                            <option>Something</option>
+                            <option>Something</option>
+                            <option>Something</option>
+                            <option>Something</option>                            
+                        </select>
+                    </div>
+                <div class="col-md-6 float-right">
+                        <h4>Sort by:</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 float-left">
+                    <h4>Filtered by:    {{listFilter}}</h4>
+                </div>
+               
+            </div>
+            <div class="table-responsive">
+                <table class="table text-light" *ngIf="games&&games.length" >
+                    <thead>
+                        <tr>
+                            <th>
+                                <button (click)="toggleImages()" class="btn btn-light text-dark">
+                                    {{showingImages ?'Hide ':'Show '}}Image
+                                </button>
+                            </th>
+                            <th><h3>Name</h3></th>
+                            <th><h3>Release Date</h3></th>
+                            <th><h3>Developer</h3></th>
+                            <th><h3>Price</h3></th>
+                            <th><h3>Popularity</h3></th>
+                            <th><h3>Rating</h3></th>
+                            <th><h3>Platforms</h3></th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-light">
+                        <tr *ngFor="let game of getFilteredGames()">
+                            <td><img src="#"></td>
+                            <td>{{game.name}}</td>
+                            <td>{{game.releaseDate}}</td>
+                            <td>{{game.developer}}</td>
+                            <td>{{game.price}}</td>
+                            <td>{{game.popularity}}</td>
+                            <td>{{game.rating}}</td>
+                            <td>{{game.platforms}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>

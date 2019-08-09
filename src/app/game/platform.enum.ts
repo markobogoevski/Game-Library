@@ -1,7 +1,13 @@
 export enum Platform {
-    WindowsOS,
+    MicrosoftWindows,
     Linux,
-    Mac,
-    Playstation4,
-    XBox
+    MacOS,
+    OSX,
+    PlayStation3,
+    PlayStation4,
+    Xbox360,
+    Android,
+    XboxOne,
+    NintendoSwitch,
+    iOS
 }

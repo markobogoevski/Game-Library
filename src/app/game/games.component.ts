@@ -11,16 +11,19 @@ import { Subscription } from 'rxjs';
 export class GamesComponent implements OnInit, OnDestroy{
 
   private games:Game[];
-  private pageTitle:string="Games by "+this.companyName;
   private gameSubscriber:Subscription;
   private errorFlag:boolean=false;
   private errorMessage:string="";
+  private companyName:string="";
+  private companyUid:number;
+  private pageTitle:string="Games: ";
+  private listFilter:string="";
+  private showingImages:boolean=true;
 
-  constructor(private companyName:string,private companyUid:number,
-    private gameService:GameDataService) { }
+  constructor(private gameService:GameDataService) { }
 
   ngOnInit() {
-    this.gameSubscriber=this.gameService.getGamesByCompany(this.companyUid)
+    this.gameSubscriber=this.gameService.getGames()
     .subscribe(
       (data)=>{
         this.games=data;
@@ -46,6 +49,21 @@ export class GamesComponent implements OnInit, OnDestroy{
     this.errorFlag=true;
     this.errorMessage=error.error.errorMessage;
     console.log(this.errorMessage);
+  }
+
+  getFilteredGames():Game[]{
+    if(this.listFilter===null||this.listFilter==="")
+    return this.games;
+    else{
+    return this.games.filter
+    (g=>g.name.toLocaleLowerCase().includes(
+      this.listFilter.toLocaleLowerCase()
+    ));
+    }
+  }
+
+  toggleImages():void{
+    this.showingImages=!this.showingImages;
   }
 
 }

@@ -1,71 +1,68 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container pt-5 mt-5 body bg-dark main">
+<div class=" pt-5 body bg-dark main static-top">
   <div style="text-align:center">
     <h1 class="text-light">
       Welcome to {{ title }}!
     </h1>
-    <img width="300" alt="Angular Logo" src="https://downloads.2kgames.com/battleborn/img/titles/en/interior_title_game_info.png">
+    <img width="300" alt="Angular Logo"
+      src="https://downloads.2kgames.com/battleborn/img/titles/en/interior_title_game_info.png">
   </div>
-      <!-- Image and text -->
+  <!-- Image and text -->
   <div class="p-0 mt-5">
-     
-    <nav class="navbar navbar-dark bg-dark">
-       
-          <div class="float-left">
-              <div class="pos-f-t float-left">
-                  <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="bg-dark p-4">
-                      <h4 class="text-white">Collapsed content</h4>
-                      <span class="text-muted">Toggleable via the navbar brand.</span>
-                    </div>
-                  </div>
-                  <nav class="navbar navbar-dark bg-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  </nav>
-                </div>
-              <nav class="navbar navbar-expand-lg navbar-light bg-black ">
-                  <i class="fab fa-accusoft"></i>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" [routerLink]="home">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" [routerLink]="games">Games</a>
-                          </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Shop</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Companies
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link disabled" href="#">Create Company</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </nav>
-          </div>
-        
-              <div class=" float-right">
-                  <form class="form-inline my-2">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-              </div>
-            
-      </nav>
-    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="">
+        <fa name="angle-double-down"></fa>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" [class.active]="activation==='Home'">
+            <a (click)="changeActivation('Home')" class="nav-link  m-3" [routerLink]="['/home']">Home </a>
+          </li>
+          <li class="nav-item m-3" [class.active]="activation==='Games'">
+            <a (click)="changeActivation('Games')" class="nav-link" [routerLink]="['/games']">Games</a>
+          </li>
+          <li class="nav-item m-3" [class.active]="activation==='Shop'">
+            <a (click)="changeActivation('Shop')" class="nav-link" [routerLink]="['/shop']">Shop</a>
+          </li>
+          <li class="nav-item dropdown m-3" [class.active]="activation==='Companies'">
+            <a (click)="changeActivation('Companies')" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Companies
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Company 1</a>
+              <a class="dropdown-item" href="#">Company 2</a>
+              <a class="dropdown-item" href="#">Company 3</a>
+              <a class="dropdown-item" href="#">Company 4</a>
+              <a class="dropdown-item" href="#">Company 5</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Create your company!</a>
+            </div>
+          </li>
+          <li class="nav-item m-3" [class.active]="activation==='SignUp'" [hidden]="signedIn===true">
+            <a (click)="changeActivation('SignUp')" class="nav-link"  [routerLink]="['/signUp']">Sign up</a>
+          </li>
+          <li class="nav-item m-3" [class.active]="activation==='SignIn'" [hidden]="signedIn===true">
+            <a (click)="onSignIn()" class="nav-link"  [routerLink]="['/signIn']">Sign in</a>
+          </li>
+          <li class="nav-item m-3" [class.active]="activation==='SignOut'" [hidden]="!signedIn">
+              <a (click)="onSignOut()" class="nav-link"  [routerLink]="['/home']">Sign out</a>
+            </li>
+      
+        </ul>
+        <form #welcomeSearch="ngForm" class="form-inline my-2 my-lg-0">
+          <input name="searchField" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchField">
+          <button (click)="onSearch()" class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </div>
 </div>
 
-
+<router-outlet></router-outlet>

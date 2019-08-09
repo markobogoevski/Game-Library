@@ -1,0 +1,74 @@
+div.carousel-caption{
+    color: #ffffff;
+    opacity: 0.8;
+}
+.detailBox {
+    color:White;
+    width:100%;
+}
+.titleBox {
+    padding:10px;
+}
+.titleBox label{
+  margin:0;
+  font-size: 30px;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:3px dotted black;
+    border-bottom:3px dotted black;
+
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:10px;
+    list-style:none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:35px;
+    margin-right:10px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    border-bottom:2px dotted white; 
+    margin:0;
+}
+.sub-text {
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    padding:10px;
+}
+
+.media-body{
+    border-bottom:3px dotted white;
+}
+
