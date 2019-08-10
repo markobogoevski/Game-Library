@@ -38,7 +38,7 @@ import { SignUpComponent } from './account/sign-up.component';
       { path: 'companies',component:CompaniesComponent},
       { path: 'companies/:id',component:CompanyComponent},
       { path: 'create',component:CompanyComponent},
-      { path: 'shop',component:ShopComponent},
+      { path: 'shop/:id',component:ShopComponent},
       { path: 'home',component:WelcomeComponent},
       {path:'signIn',component:SignInComponent},
       {path:'signUp',component:SignUpComponent},

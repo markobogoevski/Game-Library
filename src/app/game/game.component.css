@@ -1,0 +1,15 @@
+.jumbotron{
+    width:50%;
+}
+.card-title{
+    padding-bottom: 2px;
+    border-bottom: 2px dashed black;
+}
+.card-text{
+    padding: 10px;
+    background-color: rgb(245, 214, 205);
+    border-radius: 5px;
+}
+.card{
+    background-color: rgb(143, 143, 149);
+}

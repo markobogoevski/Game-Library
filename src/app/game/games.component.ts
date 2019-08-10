@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Game } from './game';
 import { GameDataService } from './game-data.service';
 import { Subscription } from 'rxjs';
+import { stringify } from 'querystring';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-games',
@@ -14,13 +16,14 @@ export class GamesComponent implements OnInit, OnDestroy{
   private gameSubscriber:Subscription;
   private errorFlag:boolean=false;
   private errorMessage:string="";
-  private companyName:string="";
-  private companyUid:number;
   private pageTitle:string="Games: ";
   private listFilter:string="";
   private showingImages:boolean=true;
+  private imageWidth:number=200;
+  private imageHeight:number=this.imageWidth*9/8;
+  private sortingCriteria:string="GameName"
 
-  constructor(private gameService:GameDataService) { }
+  constructor(private router:Router,private gameService:GameDataService) { }
 
   ngOnInit() {
     this.gameSubscriber=this.gameService.getGames()
@@ -64,6 +67,98 @@ export class GamesComponent implements OnInit, OnDestroy{
 
   toggleImages():void{
     this.showingImages=!this.showingImages;
+  }
+
+  Sort(option:string):void{
+    if(this.sortingCriteria==="GameName")
+    this.SortByName(option);
+    else if(this.sortingCriteria==="ReleaseDate")
+    this.SortByDate(option);
+    else if(this.sortingCriteria==="Rating")
+    this.SortByRating(option);
+    else if(this.sortingCriteria==="Price")
+    this.SortByPrice(option);
+    else if(this.sortingCriteria==="Popularity")
+    this.SortByPopularity(option);
+    else
+      return;
+    }
+
+  SortByDate(option: string) {
+    if(option==='ascending'){
+      this.games.sort((g1,g2)=>{
+        g1.actualReleaseDate=new Date(g1.releaseDate);
+        g2.actualReleaseDate=new Date(g2.releaseDate);
+        if (g1.actualReleaseDate > g2.actualReleaseDate) {
+          return 1;
+      }  
+      if (g1.actualReleaseDate < g2.actualReleaseDate) {
+          return -1;
+      }
+      return 0;
+      });
+    }else{
+      this.games.sort((g1,g2)=>{
+        g1.actualReleaseDate=new Date(g1.releaseDate);
+        g2.actualReleaseDate=new Date(g2.releaseDate);
+        if (g1.actualReleaseDate < g2.actualReleaseDate) {
+          return 1;
+      }  
+      if (g1.actualReleaseDate > g2.actualReleaseDate) {
+          return -1;
+      }
+      return 0;
+      });
+    }
+  }
+
+  SortByPopularity(option: string) {
+    if(option==='ascending'){
+      this.games.sort((g1,g2)=>g1.popularity-g2.popularity);
+    }else{
+      this.games.sort((g1,g2)=>g2.popularity-g1.popularity);
+    }
+  }
+  SortByPrice(option: string) {
+    if(option==='ascending'){
+      this.games.sort((g1,g2)=>g1.price-g2.price);
+    }else{
+      this.games.sort((g1,g2)=>g2.price-g1.price);
+    }
+  }
+  SortByRating(option: string) {
+    if(option==='ascending'){
+      this.games.sort((g1,g2)=>g1.rating-g2.rating);
+    }else{
+      this.games.sort((g1,g2)=>g2.rating-g1.rating);
+    }
+  }
+  SortByName(option: string) {
+    if(option==='ascending'){
+      this.games.sort((g1,g2)=>{
+        if (g1.name > g2.name) {
+          return 1;
+      }  
+      if (g1.name < g2.name) {
+          return -1;
+      }
+      return 0;
+      });
+    }else{
+      this.games.sort((g1,g2)=>{
+        if (g1.name < g2.name) {
+          return 1;
+      }  
+      if (g1.name > g2.name) {
+          return -1;
+      }
+      return 0;
+      });
+    }
+  }
+
+  buyGame(gameId:number):void{
+    this.router.navigate(['/shop',gameId]);
   }
 
 }

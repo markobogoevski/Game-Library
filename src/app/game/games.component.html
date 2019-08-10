@@ -5,23 +5,23 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-md-2">Filter by:</div>
-                <div class="col-md-4">
-                    <input type='text' [(ngModel)]="listFilter"/>
+                <div class="col-md-6 my-4 float-left">Filter by:
+                    <input class="px-2 m-2" type='text' [(ngModel)]="listFilter"/>
                 </div>
-                <div class="col-md-2 float-right">Sort by:</div>
-                <div class="col-md-4 float-left">
-                        <select>
-                            <option>Something</option>
-                            <option>Something</option>
-                            <option>Something</option>
-                            <option>Something</option>
-                            <option>Something</option>
-                            <option>Something</option>                            
-                        </select>
-                    </div>
-                <div class="col-md-6 float-right">
-                        <h4>Sort by:</h4>
+                <div class="col-md-6 my-4">Sort by:
+                    <select class="px-2 m-2" name="sortingCriteria" [(ngModel)]="sortingCriteria">
+                        <option value="GameName">Game name</option>
+                        <option value="ReleaseDate">Release Date</option>
+                        <option value="Rating">Rating</option>
+                        <option value="Price">Price</option>
+                        <option value="Popularity">Popularity</option>
+                    </select>
+                    <button (click)="Sort('ascending')" class="btn p-1 mx-1 btn-light text-dark">
+                            <i class="fa fa-arrow-up"></i>
+                    </button>
+                    <button (click)="Sort('descending')" class="btn p-1 mx-1 btn-light text-dark">
+                            <i class="fa fa-arrow-down"></i>
+                    </button>
                 </div>
             </div>
             <div class="row">
@@ -35,34 +35,52 @@
                     <thead>
                         <tr>
                             <th>
-                                <button (click)="toggleImages()" class="btn btn-light text-dark">
+                                <button (click)="toggleImages()" class="btn btn-primary text-light">
                                     {{showingImages ?'Hide ':'Show '}}Image
                                 </button>
                             </th>
-                            <th><h3>Name</h3></th>
-                            <th><h3>Release Date</h3></th>
-                            <th><h3>Developer</h3></th>
-                            <th><h3>Price</h3></th>
-                            <th><h3>Popularity</h3></th>
-                            <th><h3>Rating</h3></th>
-                            <th><h3>Platforms</h3></th>
+                            <th><h4>Name</h4></th>
+                            <th><h4>Release Date</h4></th>
+                            <th><h4>Developer</h4></th>
+                            <th><h4>Price</h4></th>
+                            <th><h4>Popularity</h4></th>
+                            <th><h4>Rating</h4></th>
+                            <th><h4>Platforms</h4></th>
                         </tr>
                     </thead>
                     <tbody class="text-light">
                         <tr *ngFor="let game of getFilteredGames()">
-                            <td><img src="#"></td>
-                            <td>{{game.name}}</td>
+                            <td><img *ngIf="showingImages" [src]="game.imageUrl" [style.width.px]="imageWidth"
+                                [style.height.px]="imageHeight"></td>
+                            <a [routerLink]="['/games',game.id]"><td>{{game.name}}</td></a>
                             <td>{{game.releaseDate}}</td>
                             <td>{{game.developer}}</td>
                             <td>{{game.price}}</td>
                             <td>{{game.popularity}}</td>
                             <td>{{game.rating}}</td>
                             <td>{{game.platforms}}</td>
+                            <td><button style="width:100px;" (click)="buyGame(game.id)" class="btn btn-success text-light">
+                                    Buy Game
+                                </button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
         </div>
-
+        <div class="m-5">
+                <nav aria-label="...">
+                        <ul class="pagination justify-content-end">
+                                <li class="page-item ">
+                                        <a class="page-link text-light bg-dark" href="#">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link text-light bg-dark" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link text-light bg-dark" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link text-light bg-dark" href="#">3</a></li>
+                                <li class="page-item">
+                                        <a class="page-link bg-dark text-light" href="#">Next</a>
+                                </li>
+                        </ul>
+                </nav>
+        </div>
     </div>

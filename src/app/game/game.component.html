@@ -1,1 +1,32 @@
-<p>game works!</p>
+<div class="jumbotron container-fluid bg-dark text-light my-5">
+    <div class="container mb-4">
+        <div class="bg-dark mb-4 text-light text-center">
+            <h2>{{pageTitle}}{{game.name}}</h2>
+        </div>
+        <div class="card m-auto" style="width: 35rem;">
+            <img [src]="game.imageUrl" class="card-img-top" alt="...">
+            <div class="card-body bg-light text-dark">
+                <h5 class="card-title">{{game.name}}</h5>
+                <p class="card-text">{{game.description}}</p>
+            </div>
+            <div class="bg-info">
+                <ul class="list-group text-dark list-group-flush">
+                    <li class="list-group-item">Release Date: {{game.releaseDate}}</li>
+                    <li class="list-group-item">Developer: {{game.developer}}</li>
+                    <li class="list-group-item">Price: {{game.price}}</li>
+                    <li class="list-group-item">Rating: {{game.rating}}</li>
+                    <li class="list-group-item">Popularity: {{game.popularity}}</li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <a class="card-link">Link</a>
+                <a class="card-link">Another link</a>
+            </div>
+        </div>
+       
+    </div>
+    <button style="width:200px;" (click)="onBack()" class="btn btn-primary mt-2 float-left">Back</button>
+    <button style="width:100px;" (click)="buyGame()" class="btn btn-success mt-2 text-light float-right">
+        Buy Game
+    </button>
+</div>
