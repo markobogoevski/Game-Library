@@ -52,7 +52,7 @@
                         <tr *ngFor="let game of getFilteredGames()">
                             <td><img *ngIf="showingImages" [src]="game.imageUrl" [style.width.px]="imageWidth"
                                 [style.height.px]="imageHeight"></td>
-                            <a [routerLink]="['/games',game.id]"><td>{{game.name}}</td></a>
+                            <td><a [routerLink]="['/games',game.id]">{{game.name}}</a></td>
                             <td>{{game.releaseDate}}</td>
                             <td>{{game.developer}}</td>
                             <td>{{game.price}}</td>
