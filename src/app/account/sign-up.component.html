@@ -1,1 +1,109 @@
-<p>sign-up works!</p>
+<div class="jumbotron container-fluid bg-dark text-light my-5">
+    <div class="container mb-4">
+        <div class="bg-dark mb-4 text-light text-center">
+            <h2>Create an account :</h2>
+        </div>
+        <form #signUpForm="ngForm">
+                <div class="form-row">
+                     <div class="form-group col-md-6">
+                    <label for="firstName">First Name</label>
+                    <input required [(ngModel)]="user.firstName" type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" minlength="2" maxlength="20" #firstName="ngModel">
+                    <div [hidden]="!submitted || (submitted&&firstName.valid)" class="alert alert-danger">
+                      The first name field should be 2-20 letters and is required!
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="lastName">Last Name</label>
+                    <input [(ngModel)]="user.lastName" type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required minlength="2" maxlength="20"
+                    #lastName="ngModel">
+                    <div [hidden]="!submitted || (submitted&&lastName.valid)" class="alert alert-danger">
+                        The last name field should be 2-20 letters and is required!
+                      </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input [(ngModel)]="user.emailAdress" name="emailAdress" type="email" class="form-control" id="emailAdress" placeholder="Email" required minlength="2" maxlength="20" pattern=".*@.*.com" #email="ngModel">
+                    <div [hidden]="!submitted || (submitted&&email.valid)" class="alert alert-danger">
+                        The email field should be 2-20 letters, is required and should represent a valid adress!
+                      </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input [(ngModel)]="user.password" name="password" type="password" class="form-control" id="password" placeholder="Password" required minlength="2" maxlength="20"
+                    #password="ngModel">
+                    <div [hidden]="!submitted || (submitted&&password.valid)" class="alert alert-danger">
+                        The password field should be 2-20 letters, is required and should be strong!
+                      </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-8">
+                  <label for="adress1">Address</label>
+                  <input [(ngModel)]="user.adress1" type="text" class="form-control" id="adress1" name="adress1" placeholder="1234 Main St" required
+                  #adress1="ngModel">
+                  <div [hidden]="!submitted || (submitted&&adress1.valid)" class="alert alert-danger">
+                      The adress field is required!
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="phoneNumber">Phonenumber</label>
+                  <input [(ngModel)]="user.phoneNumber" type="text" class="form-control" id="phoneNumber"  name="phoneNumber" placeholder="(201) 555-0123" minlength="9" maxlength="9"
+                  #number="ngModel">
+                  <div [hidden]="!submitted || (submitted&&number.valid)" class="alert alert-danger">
+                      The phonenumber should contain 9 letters!
+                    </div>
+                </div>
+              </div>
+                <div class="form-group">
+                  <label for="adress2">Address 2</label>
+                  <input [(ngModel)]="user.adress2" type="text" class="form-control" id="adress2" name="adress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="city">City</label>
+                    <input [(ngModel)]="user.city" type="text" class="form-control" id="city" name="city" required #city="ngModel">
+                    <div [hidden]="!submitted || (submitted&&city.valid)" class="alert alert-danger">
+                        The city field is required!
+                      </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="country">State</label>
+                    <select [(ngModel)]="user.country" id="country" class="form-control" name="country" required
+                    #country="ngModel">
+                      <option selected>Choose...</option>
+                      <option value="myCount" *ngFor="let myCount of countries">{{myCount}}</option>
+                    </select>
+                    <div [hidden]="!submitted || (submitted&&country.valid)" class="alert alert-danger">
+                        The state field is required!
+                      </div>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="zip">Zip</label>
+                    <input [(ngModel)]="user.zip" type="text" class="form-control" id="zip" name="zip" placeholder="Zip code:" required minlength="4" maxlength="4" #zip="ngModel">
+                    <div [hidden]="!submitted || (submitted&&zip.valid)" class="alert alert-danger">
+                        The zip field is required and must be 4 letters!
+                      </div>
+                  </div>
+                    <div class="form-group col-md-2">
+                        <label for="age">Age</label>
+                        <input #age [(ngModel)]="user.age" type="number"   class="form-control" id="age" name="age" required min="18"
+                        #age="ngModel">
+                        <div [hidden]="!submitted || (submitted&&age.valid)" class="alert alert-danger">
+                            You must be at least 18 years old!
+                          </div>
+                    </div >
+                  </div>
+                  <div class="form-check">
+                    <input [(ngModel)]="user.terms" class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                    <label class="form-check-label" for="terms">
+                      I accept the terms and conditions
+                    </label>
+                    <div [hidden]="!submitted || (submitted&&user.terms===false)" class="alert alert-danger">
+                        You must accept the terms and conditions!
+                      </div>
+                  </div>
+              </form>
+             
+    </div>
+    <button style="width:100%;" (click)="onSubmit(signUpForm)" class="btn d-block btn-primary mt-2 float-left">Submit</button>
+</div>

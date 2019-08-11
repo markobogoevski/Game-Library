@@ -1,0 +1,12 @@
+.jumbotron{
+    width: 60%;
+}
+.ng-valid[required]:not(#age), .ng-valid.required:not(#age)  {
+    border-left: 7px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 7px solid #a94442; /* red */
+  }
+
+ 
