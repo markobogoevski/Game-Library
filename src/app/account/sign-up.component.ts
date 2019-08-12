@@ -12,6 +12,8 @@ export class SignUpComponent implements OnInit, OnDestroy {
   
   submitted:boolean;
   formInvalid:boolean;
+  emailInvalid:boolean=false;
+  emailMessage:string="";
 
   user: User = {
     firstName: '',
@@ -65,15 +67,24 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.submitted=false;
+    this.emailInvalid=false;
+    this.emailMessage="";
   }
 
   onSubmit(form:NgForm) {
     this.submitted=true;
     if(form.valid){
-    this.accountService.createAccount(this.user);
-        form.resetForm();
-        alert("Account was succesfully created!");
-        this.submitted=false;
+    let error=this.accountService.createAccount(this.user);
+    if(error.result){
+      this.emailInvalid=true;
+      this.emailMessage=error.errorMessage;
+    }else{
+      form.resetForm();
+      alert("Account was succesfully created!");
+      this.submitted=false;
+      this.emailInvalid=false;
+      this.emailMessage="";
+    }
     }
   }
 

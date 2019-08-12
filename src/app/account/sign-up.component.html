@@ -22,10 +22,13 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="email">Email</label>
-                    <input [(ngModel)]="user.emailAdress" name="emailAdress" type="email" class="form-control" id="emailAdress" placeholder="Email" required minlength="2" maxlength="20" pattern=".*@.*.com" #email="ngModel">
+                    <input [(ngModel)]="user.emailAdress" name="emailAdress" type="email" class="form-control" id="emailAdress" placeholder="Email" required minlength="2" maxlength="40" pattern=".*@.*.com" #email="ngModel">
                     <div [hidden]="!submitted || (submitted&&email.valid)" class="alert alert-danger">
-                        The email field should be 2-20 letters, is required and should represent a valid adress!
+                        The email field should be 2-40 letters, is required and should represent a valid adress!
                       </div>
+                    <div [hidden]="!submitted || !email.valid || !emailInvalid" class="alert alert-danger">
+                        {{emailMessage}}
+                    </div>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="password">Password</label>
@@ -106,5 +109,5 @@
               </form>
              
     </div>
-    <button style="width:100%;" (click)="onSubmit(signUpForm)" class="btn d-block btn-primary mt-2 float-left">Submit</button>
+    <button style="width:50%;" (click)="onSubmit(signUpForm)" class="btn d-block btn-primary m-auto mt-3 mb-0">Submit</button>
 </div>

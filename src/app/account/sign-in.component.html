@@ -1,1 +1,34 @@
-<p>sign-in works!</p>
+<div class="jumbotron container-fluid bg-dark text-light my-5">
+    <div class="container mb-4">
+        <div class="bg-dark mb-4 text-light text-center">
+            <h2>Log in with your account :</h2>
+        </div>
+        <form #signInForm="ngForm">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="emailIn">Email</label>
+                    <input required [(ngModel)]="email" type="email" class="form-control" id="emailIn" name="emailIn"
+                        placeholder="Email adress" minlength="2" maxlength="40" pattern=".*@.*.com" #emailIn="ngModel">
+                    <div [hidden]="!submitted || (submitted&&emailIn.valid)" class="alert alert-danger">
+                        The email adress field should be 2-40 letters and is required!
+                    </div>
+                    <div [hidden]="!submitted || !emailIn.valid || !emailInvalid" class="alert alert-danger">
+                        {{emailMessage}}
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="passwordIn">Password</label>
+                    <input [(ngModel)]="password" type="password" class="form-control" id="passwordIn" name="passwordIn"
+                        placeholder="Password" required minlength="2" maxlength="20" #passwordIn="ngModel">
+                    <div [hidden]="!submitted || !passwordIn.valid || !passwordInvalid" class="alert alert-danger">
+                        {{passwordMessage}}
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <button style="width:50%;" (click)="onSubmit(signInForm)"
+        class="btn d-block btn-primary m-auto ">Submit</button>
+        
+</div>

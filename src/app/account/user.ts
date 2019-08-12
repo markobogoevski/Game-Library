@@ -1,3 +1,5 @@
+import { Game } from '../game/game';
+
 export interface User {
     firstName:string;
     lastName:string;
@@ -11,4 +13,5 @@ export interface User {
     zip:string;
     age?:number;
     terms:boolean;
+    purchasedGames:Game[];
 }

@@ -47,14 +47,17 @@
             <a (click)="changeActivation('SignUp')" class="nav-link"  [routerLink]="['/signUp']">Sign up</a>
           </li>
           <li class="nav-item m-3" [class.active]="activation==='SignIn'" [hidden]="signedIn===true">
-            <a (click)="onSignIn()" class="nav-link"  [routerLink]="['/signIn']">Sign in</a>
+            <a  (click)="changeActivation('SignIn')" class="nav-link"  [routerLink]="['/signIn']">Sign in</a>
           </li>
-          <li class="nav-item m-3" [class.active]="activation==='SignOut'" [hidden]="!signedIn">
-              <a (click)="onSignOut()" class="nav-link"  [routerLink]="['/home']">Sign out</a>
+          <li class="nav-item m-3 float-right" [class.active]="activation==='ShoppingCart'" [hidden]="signedIn">
+              <a  (click)="changeActivation('ShoppingCart')" class="nav-link"  [routerLink]="['/shoppingCart']">Shopping Cart</a>
             </li>
-      
+          <li (click)="onSignOut()" class="nav-item m-3" [class.active]="activation==='SignOut'" [hidden]="!signedIn">
+              <a  class="nav-link"  [routerLink]="['/home']">Sign out</a>
+            </li>
         </ul>
         <form #welcomeSearch="ngForm" class="form-inline my-2 my-lg-0">
+          
           <input name="searchField" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchField">
           <button (click)="onSearch()" class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
@@ -63,4 +66,4 @@
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet (activate)="onActivate($event)"></router-outlet>

@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Game } from './game';
 import { GameDataService } from './game-data.service';
 import { Subscription } from 'rxjs';
-import { stringify } from 'querystring';
 import { Router } from '@angular/router';
+import { AnnouncerService } from '../account/announcer.service';
 
 @Component({
   selector: 'app-games',
@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 })
 export class GamesComponent implements OnInit, OnDestroy{
 
+  private signedIn:boolean=false;
+  private clicked:boolean=false;
   private games:Game[];
   private gameSubscriber:Subscription;
   private errorFlag:boolean=false;
@@ -158,7 +160,10 @@ export class GamesComponent implements OnInit, OnDestroy{
   }
 
   buyGame(gameId:number):void{
+    this.clicked=true;
+    if(this.signedIn){
     this.router.navigate(['/shop',gameId]);
+    }
   }
 
 }
