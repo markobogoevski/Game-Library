@@ -9,6 +9,6 @@ export interface User {
     city:string;
     country:string;
     zip:string;
-    age:number;
+    age?:number;
     terms:boolean;
 }

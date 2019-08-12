@@ -86,9 +86,9 @@
                   </div>
                     <div class="form-group col-md-2">
                         <label for="age">Age</label>
-                        <input #age [(ngModel)]="user.age" type="number"   class="form-control" id="age" name="age" required min="18"
-                        #age="ngModel">
-                        <div [hidden]="!submitted || (submitted&&age.valid)" class="alert alert-danger">
+                        <input #age [(ngModel)]="user.age" type="number"   class="form-control" id="age" name="age" required
+                        >
+                        <div [hidden]="!submitted || (submitted&&user.age>=18)" class="alert alert-danger">
                             You must be at least 18 years old!
                           </div>
                     </div >
@@ -98,9 +98,10 @@
                     <label class="form-check-label" for="terms">
                       I accept the terms and conditions
                     </label>
-                    <div [hidden]="!submitted || (submitted&&user.terms===false)" class="alert alert-danger">
+                    <div [hidden]="!submitted || (submitted&&user.terms==true)" class="alert alert-danger">
                         You must accept the terms and conditions!
                       </div>
+                    
                   </div>
               </form>
              

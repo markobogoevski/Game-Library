@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { User } from './user';
 import {NgForm } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { AccountService } from './account.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,7 +12,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
   
   submitted:boolean;
   formInvalid:boolean;
-  private accountRepoUrl:string="app/account/accounts.json";
 
   user: User = {
     firstName: '',
@@ -20,7 +19,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
     phoneNumber: '',
     adress1: '',
     adress2: '',
-    age: 10,
     city: '',
     country: '',
     emailAdress: '',
@@ -58,7 +56,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
     "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
   ]
 
-  constructor(private http:HttpClient) { 
+  constructor(private accountService:AccountService) { 
     this.submitted=false;
   }
 
@@ -72,12 +70,12 @@ export class SignUpComponent implements OnInit, OnDestroy {
   onSubmit(form:NgForm) {
     this.submitted=true;
     if(form.valid){
-    alert('Account was created!')
-    form.resetForm();
-    this.http.post<User>(this.accountRepoUrl,JSON.stringify(this.user));
-    this.submitted=false;
+    this.accountService.createAccount(this.user);
+        form.resetForm();
+        alert("Account was succesfully created!");
+        this.submitted=false;
     }
   }
 
-  get diagnostic() { return JSON.stringify(this.user); }
+
 }
