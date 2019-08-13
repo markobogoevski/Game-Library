@@ -1,4 +1,4 @@
-export interface Game {
+export class Game {
     name:string;
     id:number;
     productCode:string;

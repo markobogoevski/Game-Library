@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../account/user';
 
 @Component({
   selector: 'app-shop',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopComponent implements OnInit {
 
+  private retrievedUser:User;
+  
   constructor() { }
 
   ngOnInit() {

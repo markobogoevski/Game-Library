@@ -7,8 +7,9 @@ import { User } from './user';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
-  private user:User;
-  
+  private retrievedUser:User;
+  private imageWidth:number=100;
+  private imageHeight:number=this.imageWidth*9/8;
   constructor() { }
 
   ngOnInit() {

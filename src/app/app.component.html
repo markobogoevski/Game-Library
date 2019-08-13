@@ -49,7 +49,7 @@
           <li class="nav-item m-3" [class.active]="activation==='SignIn'" [hidden]="signedIn===true">
             <a  (click)="changeActivation('SignIn')" class="nav-link"  [routerLink]="['/signIn']">Sign in</a>
           </li>
-          <li class="nav-item m-3 float-right" [class.active]="activation==='ShoppingCart'" [hidden]="signedIn">
+          <li class="nav-item m-3 float-right" [class.active]="activation==='ShoppingCart'" [hidden]="!signedIn">
               <a  (click)="changeActivation('ShoppingCart')" class="nav-link"  [routerLink]="['/shoppingCart']">Shopping Cart</a>
             </li>
           <li (click)="onSignOut()" class="nav-item m-3" [class.active]="activation==='SignOut'" [hidden]="!signedIn">

@@ -4,6 +4,8 @@ import { GameDataService } from './game-data.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 import { AnnouncerService } from '../account/announcer.service';
+import { User } from '../account/user';
+import { CommunicationService } from '../shared/communication.service';
 
 @Component({
   selector: 'app-games',
@@ -13,6 +15,7 @@ import { AnnouncerService } from '../account/announcer.service';
 export class GamesComponent implements OnInit, OnDestroy{
 
   private signedIn:boolean=false;
+  private retrievedUser:User;
   private clicked:boolean=false;
   private games:Game[];
   private gameSubscriber:Subscription;
@@ -25,7 +28,8 @@ export class GamesComponent implements OnInit, OnDestroy{
   private imageHeight:number=this.imageWidth*9/8;
   private sortingCriteria:string="GameName"
 
-  constructor(private router:Router,private gameService:GameDataService) { }
+  constructor(private router:Router,private gameService:GameDataService,
+    private commService:CommunicationService) { }
 
   ngOnInit() {
     this.gameSubscriber=this.gameService.getGames()
@@ -162,7 +166,15 @@ export class GamesComponent implements OnInit, OnDestroy{
   buyGame(gameId:number):void{
     this.clicked=true;
     if(this.signedIn){
-    this.router.navigate(['/shop',gameId]);
+    this.gameService.getGameById(gameId).subscribe(
+      (game)=>{
+        if(!this.retrievedUser.purchasedGames)
+        this.retrievedUser.purchasedGames=[];
+        this.retrievedUser.purchasedGames.push(game);
+        this.commService.updateData(this.retrievedUser);
+        this.router.navigate(['/shoppingCart']);
+      }
+    );
     }
   }
 

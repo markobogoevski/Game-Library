@@ -26,7 +26,7 @@
        
     </div>
     <button style="width:200px;" (click)="onBack()" class="btn btn-primary mt-2 float-left">Back</button>
-    <button style="width:100px;" (click)="buyGame()" class="btn btn-success mt-2 text-light float-right">
+    <button [disabled]="!signedIn" style="width:100px;" (click)="buyGame()" class="btn btn-success mt-2 text-light float-right">
         Buy Game
     </button>
 </div>

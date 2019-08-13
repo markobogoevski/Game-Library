@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { User } from '../account/user';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ export class CommunicationService {
     return this.dataObs$;
   }
 
-  updateData(data:boolean){
-    this.dataObs$.next(data);
+  updateData(user:User){
+    this.dataObs$.next(user);
   }
   
   constructor() { }

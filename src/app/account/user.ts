@@ -13,5 +13,5 @@ export interface User {
     zip:string;
     age?:number;
     terms:boolean;
-    purchasedGames:Game[];
+    purchasedGames?:Game[];
 }

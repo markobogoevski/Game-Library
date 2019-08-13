@@ -28,9 +28,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.commService.getData().subscribe(
-      (val)=>{
-        let value=val as boolean;
-        this.signedIn=value;
+      (data)=>{
+        let user=data as User;
+        if(user!=null){
+          this.signedIn=true;
+          this.loggedInUser=user;
+        }
       }
     );
   }
@@ -41,9 +44,6 @@ export class AppComponent implements OnInit {
 
   onActivate(componentReference):void{
     componentReference.signedIn=this.signedIn;
-    componentReference.userLoggedIn.subscribe(
-      (user)=>this.loggedInUser=user
-    );
     componentReference.retrievedUser=this.loggedInUser;
   }
 

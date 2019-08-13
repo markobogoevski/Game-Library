@@ -21,8 +21,6 @@ export class SignInComponent implements OnInit, OnDestroy {
   passwordInvalid:boolean=false;
   passwordMessage:string="";
 
-  @Output() userLoggedIn:EventEmitter<User>=new EventEmitter<User>();
-
   constructor(private router:Router,private accountService:AccountService,
     private commService:CommunicationService) { }
 
@@ -56,9 +54,8 @@ export class SignInComponent implements OnInit, OnDestroy {
         this.passwordInvalid=false;
         this.passwordMessage="";
         this.submitted=false;
-        this.commService.updateData(true);
         this.retrievedUser=error.user;
-        this.userLoggedIn.emit(this.retrievedUser);
+        this.commService.updateData(this.retrievedUser);
         form.resetForm();
         alert("Logged in successfully!");
         console.log("Welcome user: ",this.retrievedUser);
