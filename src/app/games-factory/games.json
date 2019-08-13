@@ -15,7 +15,8 @@
             "Playstation 4",
             "Xbox 360"
         ],
-        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg"
+        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg",
+        "quantity":1
     },
     {
         "name": "Bioshock Infinite",
@@ -35,7 +36,9 @@
             "OS X",
             "Linux"
         ],
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg"
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg",
+        "quantity":1
+
     },
     {
         "name": "Dead Cells",
@@ -57,7 +60,8 @@
             "Mac OS",
             "Nintendo Switch"
         ],
-        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920"
+        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920",
+        "quantity":1
     },
     {
         "name": "Nier Automata",
@@ -75,7 +79,9 @@
             "Playstation 4",
             "Xbox One"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg",
+        "quantity":1
+
     },
     {
         "name": "Apex Legends",
@@ -91,7 +97,9 @@
         "platforms": [
             "Microsoft Windows"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+        "quantity":1
+
     },
     {
         "name": "Diablo 3",
@@ -109,7 +117,8 @@
             "Playstation 4",
             "Xbox 360"
         ],
-        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg"
+        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg",
+        "quantity":1
     },
     {
         "name": "Bioshock Infinite",
@@ -129,7 +138,9 @@
             "OS X",
             "Linux"
         ],
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg"
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg",
+        "quantity":1
+
     },
     {
         "name": "Dead Cells",
@@ -151,7 +162,8 @@
             "Mac OS",
             "Nintendo Switch"
         ],
-        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920"
+        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920",
+        "quantity":1
     },
     {
         "name": "Nier Automata",
@@ -169,7 +181,9 @@
             "Playstation 4",
             "Xbox One"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg",
+        "quantity":1
+
     },
     {
         "name": "Apex Legends",
@@ -185,7 +199,9 @@
         "platforms": [
             "Microsoft Windows"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+        "quantity":1
+
     },
     {
         "name": "Diablo 3",
@@ -203,7 +219,8 @@
             "Playstation 4",
             "Xbox 360"
         ],
-        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg"
+        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg",
+        "quantity":1
     },
     {
         "name": "Bioshock Infinite",
@@ -223,7 +240,9 @@
             "OS X",
             "Linux"
         ],
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg"
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg",
+        "quantity":1
+
     },
     {
         "name": "Dead Cells",
@@ -245,7 +264,8 @@
             "Mac OS",
             "Nintendo Switch"
         ],
-        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920"
+        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920",
+        "quantity":1
     },
     {
         "name": "Nier Automata",
@@ -263,7 +283,9 @@
             "Playstation 4",
             "Xbox One"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg",
+        "quantity":1
+
     },
     {
         "name": "Apex Legends",
@@ -279,7 +301,9 @@
         "platforms": [
             "Microsoft Windows"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+        "quantity":1
+
     },
     {
         "name": "Diablo 3",
@@ -297,7 +321,8 @@
             "Playstation 4",
             "Xbox 360"
         ],
-        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg"
+        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg",
+        "quantity":1
     },
     {
         "name": "Bioshock Infinite",
@@ -317,7 +342,9 @@
             "OS X",
             "Linux"
         ],
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg"
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg",
+        "quantity":1
+
     },
     {
         "name": "Dead Cells",
@@ -339,7 +366,8 @@
             "Mac OS",
             "Nintendo Switch"
         ],
-        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920"
+        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920",
+        "quantity":1
     },
     {
         "name": "Nier Automata",
@@ -357,7 +385,9 @@
             "Playstation 4",
             "Xbox One"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg",
+        "quantity":1
+
     },
     {
         "name": "Apex Legends",
@@ -373,7 +403,9 @@
         "platforms": [
             "Microsoft Windows"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+        "quantity":1
+
     },
     {
         "name": "Diablo 3",
@@ -391,7 +423,8 @@
             "Playstation 4",
             "Xbox 360"
         ],
-        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg"
+        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg",
+        "quantity":1
     },
     {
         "name": "Bioshock Infinite",
@@ -411,7 +444,9 @@
             "OS X",
             "Linux"
         ],
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg"
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg",
+        "quantity":1
+
     },
     {
         "name": "Dead Cells",
@@ -433,7 +468,8 @@
             "Mac OS",
             "Nintendo Switch"
         ],
-        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920"
+        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920",
+        "quantity":1
     },
     {
         "name": "Nier Automata",
@@ -451,7 +487,9 @@
             "Playstation 4",
             "Xbox One"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg",
+        "quantity":1
+
     },
     {
         "name": "Apex Legends",
@@ -467,7 +505,9 @@
         "platforms": [
             "Microsoft Windows"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+        "quantity":1
+
     },
     {
         "name": "Diablo 3",
@@ -485,7 +525,8 @@
             "Playstation 4",
             "Xbox 360"
         ],
-        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg"
+        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg",
+        "quantity":1
     },
     {
         "name": "Bioshock Infinite",
@@ -505,7 +546,9 @@
             "OS X",
             "Linux"
         ],
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg"
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg",
+        "quantity":1
+
     },
     {
         "name": "Dead Cells",
@@ -527,7 +570,8 @@
             "Mac OS",
             "Nintendo Switch"
         ],
-        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920"
+        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920",
+        "quantity":1
     },
     {
         "name": "Nier Automata",
@@ -545,7 +589,9 @@
             "Playstation 4",
             "Xbox One"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg",
+        "quantity":1
+
     },
     {
         "name": "Apex Legends",
@@ -561,7 +607,9 @@
         "platforms": [
             "Microsoft Windows"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+        "quantity":1
+
     },
     {
         "name": "Diablo 3",
@@ -579,7 +627,8 @@
             "Playstation 4",
             "Xbox 360"
         ],
-        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg"
+        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg",
+        "quantity":1
     },
     {
         "name": "Bioshock Infinite",
@@ -599,7 +648,9 @@
             "OS X",
             "Linux"
         ],
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg"
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg",
+        "quantity":1
+
     },
     {
         "name": "Dead Cells",
@@ -621,7 +672,8 @@
             "Mac OS",
             "Nintendo Switch"
         ],
-        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920"
+        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920",
+        "quantity":1
     },
     {
         "name": "Nier Automata",
@@ -639,7 +691,9 @@
             "Playstation 4",
             "Xbox One"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg",
+        "quantity":1
+
     },
     {
         "name": "Apex Legends",
@@ -655,7 +709,9 @@
         "platforms": [
             "Microsoft Windows"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+        "quantity":1
+
     },
     {
         "name": "Diablo 3",
@@ -673,7 +729,8 @@
             "Playstation 4",
             "Xbox 360"
         ],
-        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg"
+        "imageUrl": "https://cdn.cdkeys.com/500x706/media/catalog/product/5/0/5030917102561_1.jpg",
+        "quantity":1
     },
     {
         "name": "Bioshock Infinite",
@@ -693,7 +750,9 @@
             "OS X",
             "Linux"
         ],
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg"
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81SdO-3nxoL._SL1500_.jpg",
+        "quantity":1
+
     },
     {
         "name": "Dead Cells",
@@ -715,7 +774,8 @@
             "Mac OS",
             "Nintendo Switch"
         ],
-        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920"
+        "imageUrl": "https://store-images.s-microsoft.com/image/apps.40300.68724117649475771.eac68952-84aa-42f0-875b-09de4c2ee208.400f5d27-ba33-4b31-afc3-474baf8115c7?mode=scale&q=90&h=1080&w=1920",
+        "quantity":1
     },
     {
         "name": "Nier Automata",
@@ -733,7 +793,9 @@
             "Playstation 4",
             "Xbox One"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Nier_Automata_cover_art.jpg",
+        "quantity":1
+
     },
     {
         "name": "Apex Legends",
@@ -749,6 +811,8 @@
         "platforms": [
             "Microsoft Windows"
         ],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+        "quantity":1
+
     }
 ]

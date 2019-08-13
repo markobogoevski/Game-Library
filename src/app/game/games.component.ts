@@ -27,6 +27,8 @@ export class GamesComponent implements OnInit, OnDestroy{
   private imageWidth:number=200;
   private imageHeight:number=this.imageWidth*9/8;
   private sortingCriteria:string="GameName"
+  private pageSize:number=8;
+  private pageNumber:number;
 
   constructor(private router:Router,private gameService:GameDataService,
     private commService:CommunicationService) { }
@@ -38,6 +40,8 @@ export class GamesComponent implements OnInit, OnDestroy{
         this.games=data;
         this.errorFlag=false;
         this.errorMessage="";
+        this.games.forEach(g=>g.quantity=1);
+        this.pageNumber=this.getPageNumber();
       },
       (error)=>{
         this.handleError(error);
@@ -170,12 +174,24 @@ export class GamesComponent implements OnInit, OnDestroy{
       (game)=>{
         if(!this.retrievedUser.purchasedGames)
         this.retrievedUser.purchasedGames=[];
-        this.retrievedUser.purchasedGames.push(game);
+        
+        if(this.retrievedUser.purchasedGames.filter(g=>g.id===game.id).length>0)
+          {
+            let gameIndex=this.retrievedUser.purchasedGames.findIndex(g=>game.id===g.id);
+            this.retrievedUser.purchasedGames[gameIndex].quantity+=1;
+          }
+        else
+          this.retrievedUser.purchasedGames.push(game); 
+
         this.commService.updateData(this.retrievedUser);
         this.router.navigate(['/shoppingCart']);
       }
     );
     }
+  }
+
+  getPageNumber():number{
+    return this.games.length/this.pageSize;
   }
 
 }

@@ -27,22 +27,6 @@
           <li class="nav-item m-3" [class.active]="activation==='Games'">
             <a (click)="changeActivation('Games')" class="nav-link" [routerLink]="['/games']">Games</a>
           </li>
-      
-          <li class="nav-item dropdown m-3" [class.active]="activation==='Companies'">
-            <a (click)="changeActivation('Companies')" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Companies
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Company 1</a>
-              <a class="dropdown-item" href="#">Company 2</a>
-              <a class="dropdown-item" href="#">Company 3</a>
-              <a class="dropdown-item" href="#">Company 4</a>
-              <a class="dropdown-item" href="#">Company 5</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Create your company!</a>
-            </div>
-          </li>
           <li class="nav-item m-3" [class.active]="activation==='SignUp'" [hidden]="signedIn===true">
             <a (click)="changeActivation('SignUp')" class="nav-link"  [routerLink]="['/signUp']">Sign up</a>
           </li>

@@ -12,4 +12,5 @@ export class Game {
     popularity:number;
     platforms:string[];
     imageUrl:string;
+    quantity:number;
 }

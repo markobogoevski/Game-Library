@@ -7,8 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {RouterModule} from '@angular/router';
-import { CompaniesComponent } from './company/companies.component';
-import { CompanyComponent } from './company/company.component';
 import { GameComponent } from './game/game.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ShopComponent } from './shop/shop.component';
@@ -22,8 +20,6 @@ import { ShoppingCartComponent } from './account/shopping-cart.component';
     GamesComponent,
     GameComponent,
     WelcomeComponent,
-    CompaniesComponent,
-    CompanyComponent,
     ShopComponent,
     SignInComponent,
     SignUpComponent,
@@ -37,9 +33,6 @@ import { ShoppingCartComponent } from './account/shopping-cart.component';
     RouterModule.forRoot([
       { path: 'games', component: GamesComponent },
       { path: 'games/:id',component: GameComponent },
-      { path: 'companies',component:CompaniesComponent},
-      { path: 'companies/:id',component:CompanyComponent},
-      { path: 'create',component:CompanyComponent},
       { path: 'shop/:id',component:ShopComponent},
       {path: 'shoppingCart',component:ShoppingCartComponent},
       { path: 'home',component:WelcomeComponent},
